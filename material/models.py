@@ -8,7 +8,7 @@ class Famille_Material(models.Model):
         ('soft', 'Logiciel'),
     ]
     type = models.CharField(max_length=300, choices=TYPES_CHOICES)
-def __str__(self):
+    def __str__(self):
         return self.nom
 
 class Fournisseur(models.Model):
@@ -17,7 +17,7 @@ class Fournisseur(models.Model):
     telephone = models.CharField(max_length=20)
     email = models.EmailField()
     site_web = models.URLField(blank=True)
-def __str__(self):
+    def __str__(self):
         return self.nom
     
 class Material(models.Model):
