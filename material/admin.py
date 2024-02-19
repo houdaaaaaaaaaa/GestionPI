@@ -2,6 +2,11 @@ from django.contrib import admin
 from django.contrib.auth.models import User
 from users.models import Localisation
 from .models import Material,Famille_Material,Fournisseur
+import matplotlib.pyplot as plt
+import io
+import base64
+from django.db.models import Count
+
 class MaterialAdmin(admin.ModelAdmin):
     list_display = ('nom', 'numero_serie', 'marque', 'duree_garantie', 'duree_vie_debut', 'duree_vie_fin', 'date_affectation', 'statut', 'utilisateur', 'fournisseur', 'famille')
 
