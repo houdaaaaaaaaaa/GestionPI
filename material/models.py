@@ -1,5 +1,6 @@
 from django.db import models
 from django.contrib.auth.models import User
+from users.models import Localisation
 
 class Famille_Material(models.Model): 
     nom=models.CharField(max_length=300)
@@ -37,7 +38,12 @@ class Material(models.Model):
     utilisateur = models.ForeignKey(User, on_delete=models.SET_NULL, null=True, blank=True)
     fournisseur = models.ForeignKey(Fournisseur, on_delete=models.CASCADE)
     famille = models.ForeignKey(Famille_Material, on_delete=models.CASCADE)
+    localisation = models.ForeignKey(Localisation, on_delete=models.CASCADE, null=True, blank=True)
+
+    def save(self, *args, **kwargs):
+        if self.localisation and not self.utilisateur:
+            self.utilisateur = self.localisation.user
+        super().save(*args, **kwargs)
 
     def __str__(self):
         return self.nom
-
