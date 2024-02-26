@@ -37,9 +37,21 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'material',
-    'ticket',
     'users',
+    'Accessoires',
+    'Ticket',
+    'Logiciel',
+    'Systemes_De_Refroidissement',
+    'Mobilite',
+    'Materiel_Audiovisuel',
+    'Accessoires_De_Presentation',
+    'Equipement_De_Sauvegarde_Et_De_Securite',
+    'Imprimantes_Et_Scanners',
+    'Périphériques_De_Stockage',
+    'Ordinateur_De_Bureau',
+    'Ordinateur_Portable',
+    'Serveur',
+    'Réseau',
 ]
 
 MIDDLEWARE = [
