@@ -23,5 +23,5 @@ class UserAdmin(BaseUserAdmin):
     get_numero_de_bureau.short_description = 'Numero de Bureau'
 
 admin.site.unregister(User)
-admin.site.register(User, UserAdmin)
+admin.site.register(User,UserAdmin)
 
