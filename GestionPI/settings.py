@@ -38,20 +38,10 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'users',
-    'Accessoires',
+    'Material_hard',
+    'Material_soft',
+    'Material_fournisseur',
     'Ticket',
-    'Logiciel',
-    'Systemes_De_Refroidissement',
-    'Mobilite',
-    'Materiel_Audiovisuel',
-    'Accessoires_De_Presentation',
-    'Equipement_De_Sauvegarde_Et_De_Securite',
-    'Imprimantes_Et_Scanners',
-    'Périphériques_De_Stockage',
-    'Ordinateur_De_Bureau',
-    'Ordinateur_Portable',
-    'Serveur',
-    'Réseau',
 ]
 
 MIDDLEWARE = [
@@ -91,11 +81,13 @@ WSGI_APPLICATION = 'GestionPI.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'mysql',
-        'USER': 'admin',
+        'NAME': 'GestionPI',
+        'USER': 'Admin',
         'PASSWORD': '1234567890',
         'HOST': 'localhost',   
-        'PORT': '3306',        
+        'PORT': '3306',   
+        'OPTIONS': {
+            'init_command': "SET sql_mode='STRICT_ALL_TABLES'", }    
     }
 }
 
