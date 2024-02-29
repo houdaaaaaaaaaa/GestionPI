@@ -11,4 +11,4 @@ class Ticket(models.Model):
     status = models.CharField(max_length=20, choices= (('Active','Active'),('panding','panding'),('resolved','resolved')),default=True)
     date_de_creation = models.DateTimeField(auto_now_add=True)
     derniere_modification= models.DateTimeField(auto_now=True)
-    niveau= models.CharField(max_length=5, choices=(('A','A'),('B','B'),('c','c')),default='B') 
+    niveau= models.CharField(max_length=5, choices=(('A','A'),('B','B'),('c','c')),default='c') 
