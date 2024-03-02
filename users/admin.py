@@ -3,6 +3,9 @@ from django.contrib.auth.admin import UserAdmin as BaseUserAdmin
 from django.contrib.auth.models import User
 from users.models import Localisation
 
+
+
+
 class LocalisationInline(admin.StackedInline):
     model = Localisation
     can_delete = False
